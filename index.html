@@ -1,0 +1,760 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AF CODES</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    overflow-x:hidden;
+    color:white;
+}
+
+.hero{
+    width:100%;
+    height:100vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at center, rgba(255,0,0,0.15), transparent 40%),
+    linear-gradient(to bottom,#050505,#000000);
+}
+
+.hero::before{
+    content:'';
+    position:absolute;
+    width:1200px;
+    height:1200px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(255,0,0,0.15), transparent 70%);
+    animation:pulse 5s infinite ease-in-out;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+    opacity:0.15;
+}
+
+.logo-box{
+    position:relative;
+    z-index:5;
+    text-align:center;
+    animation:zoomIn 2s ease;
+}
+
+.logo-box img{
+    width:500px;
+    max-width:90%;
+    filter:
+    drop-shadow(0 0 10px #ff0000)
+    drop-shadow(0 0 25px #ff0000)
+    drop-shadow(0 0 45px #ff0000);
+    animation:float 4s ease-in-out infinite;
+}
+
+.glow-line{
+    width:400px;
+    height:5px;
+    margin:30px auto;
+    background:linear-gradient(to right,transparent,#ff0000,white,#ff0000,transparent);
+    border-radius:50px;
+    box-shadow:0 0 20px red;
+    animation:lineGlow 2s infinite alternate;
+}
+
+.hero-text{
+    margin-top:10px;
+}
+
+.hero-text h1{
+    font-size:65px;
+    letter-spacing:5px;
+    font-weight:800;
+    color:white;
+    text-shadow:
+    0 0 10px #fff,
+    0 0 20px red,
+    0 0 40px red;
+    animation:textGlow 3s infinite alternate;
+}
+
+.hero-text p{
+    margin-top:20px;
+    color:#ddd;
+    font-size:18px;
+    letter-spacing:2px;
+}
+
+.btn-group{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.hero-btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+    text-decoration:none;
+}
+
+.red-btn{
+    background:linear-gradient(to right,#ff0000,#ff3d3d);
+    color:white;
+    box-shadow:0 0 20px rgba(255,0,0,0.7);
+}
+
+.red-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 35px red;
+}
+
+.white-btn{
+    background:white;
+    color:black;
+    box-shadow:0 0 20px rgba(255,255,255,0.5);
+}
+
+.white-btn:hover{
+    transform:translateY(-5px) scale(1.05);
+    box-shadow:0 0 35px white;
+}
+
+.floating-circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,0,0,0.15);
+    box-shadow:0 0 20px red;
+    animation:moveCircle linear infinite;
+}
+
+.circle1{
+    width:120px;
+    height:120px;
+    top:10%;
+    left:10%;
+    animation-duration:12s;
+}
+
+.circle2{
+    width:200px;
+    height:200px;
+    bottom:10%;
+    right:10%;
+    animation-duration:18s;
+}
+
+.circle3{
+    width:70px;
+    height:70px;
+    bottom:25%;
+    left:20%;
+    animation-duration:10s;
+}
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:70px;
+    height:70px;
+    background:#25d366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    font-size:35px;
+    color:white;
+    text-decoration:none;
+    box-shadow:0 0 25px #25d366;
+    z-index:100;
+    animation:whatsappPulse 2s infinite;
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(0.5);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+}
+
+@keyframes textGlow{
+    from{
+        text-shadow:
+        0 0 10px #fff,
+        0 0 20px red,
+        0 0 40px red;
+    }
+
+    to{
+        text-shadow:
+        0 0 20px #fff,
+        0 0 40px red,
+        0 0 80px red;
+    }
+}
+
+@keyframes lineGlow{
+    from{
+        opacity:0.5;
+    }
+
+    to{
+        opacity:1;
+        box-shadow:0 0 40px red;
+    }
+}
+
+@keyframes moveCircle{
+    from{
+        transform:translateY(0px) rotate(0deg);
+    }
+
+    to{
+        transform:translateY(-40px) rotate(360deg);
+    }
+}
+
+@keyframes whatsappPulse{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.1);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+@media(max-width:768px){
+
+.hero-text h1{
+    font-size:40px;
+}
+
+.hero-text p{
+    font-size:15px;
+    padding:0 20px;
+}
+
+.glow-line{
+    width:250px;
+}
+
+.logo-box img{
+    width:320px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="floating-circle circle1"></div>
+<div class="floating-circle circle2"></div>
+<div class="floating-circle circle3"></div>
+
+<div class="logo-box">
+
+<img src="logo.png" alt="AF CODES Logo">
+
+<div class="glow-line"></div>
+
+<div class="hero-text">
+    <h1>AF CODES</h1>
+    <p>Premium Web Development • Branding • Automation</p>
+
+    <div class="btn-group">
+        <a href="#services" class="hero-btn red-btn">Our Services</a>
+
+        <a href="https://wa.me/919999999999?text=Hello%20AF%20CODES" class="hero-btn white-btn">
+            WhatsApp Us
+        </a>
+    </div>
+</div>
+
+</div>
+
+</section>
+
+<a href="https://wa.me/919999999999?text=Hello%20AF%20CODES" class="whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+
+window.addEventListener('mousemove',(e)=>{
+
+    const hero=document.querySelector('.hero');
+
+    const x=e.clientX/window.innerWidth;
+    const y=e.clientY/window.innerHeight;
+
+    hero.style.backgroundPosition=`${x*30}px ${y*30}px`;
+
+});
+
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AF CODES</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#000;
+color:white;
+overflow-x:hidden;
+}
+
+section{
+padding:100px 10%;
+}
+
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+background:radial-gradient(circle at center, rgba(255,0,0,0.18), transparent 40%), #000;
+}
+
+.hero img{
+width:500px;
+max-width:90%;
+filter:drop-shadow(0 0 15px red) drop-shadow(0 0 35px red);
+animation:float 4s ease-in-out infinite;
+}
+
+.hero h1{
+font-size:70px;
+margin-top:20px;
+text-shadow:0 0 15px red;
+}
+
+.hero p{
+margin-top:15px;
+font-size:18px;
+color:#ddd;
+}
+
+.btns{
+margin-top:35px;
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:0.4s;
+}
+
+.red{
+background:red;
+color:white;
+box-shadow:0 0 25px red;
+}
+
+.white{
+background:white;
+color:black;
+}
+
+.btn:hover{
+transform:translateY(-6px) scale(1.05);
+}
+
+.section-title{
+font-size:50px;
+margin-bottom:60px;
+text-align:center;
+text-shadow:0 0 10px red;
+}
+
+.about{
+background:#050505;
+}
+
+.about-box{
+background:linear-gradient(145deg,#111,#1a1a1a);
+padding:50px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 0 25px rgba(255,0,0,0.2);
+}
+
+.about-box p{
+line-height:1.9;
+font-size:17px;
+color:#ddd;
+margin-top:20px;
+}
+
+.services-grid,
+.offer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.flip-card{
+background:transparent;
+perspective:1000px;
+height:350px;
+}
+
+.flip-inner{
+position:relative;
+width:100%;
+height:100%;
+transition:transform 0.8s;
+transform-style:preserve-3d;
+}
+
+.flip-card:hover .flip-inner{
+transform:rotateY(180deg);
+}
+
+.flip-front,
+.flip-back{
+position:absolute;
+width:100%;
+height:100%;
+backface-visibility:hidden;
+border-radius:25px;
+padding:35px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.flip-front{
+background:linear-gradient(145deg,#111,#1b1b1b);
+box-shadow:0 0 20px rgba(255,0,0,0.25);
+}
+
+.flip-front i{
+font-size:65px;
+margin-bottom:20px;
+color:red;
+text-shadow:0 0 20px red;
+}
+
+.flip-front h3{
+font-size:28px;
+}
+
+.flip-back{
+background:linear-gradient(145deg,#ff0000,#910000);
+transform:rotateY(180deg);
+}
+
+.flip-back ul{
+list-style:none;
+line-height:2;
+font-size:16px;
+}
+
+.offer-card{
+background:linear-gradient(145deg,#111,#1a1a1a);
+padding:40px;
+border-radius:25px;
+text-align:center;
+transition:0.4s;
+box-shadow:0 0 20px rgba(255,0,0,0.2);
+}
+
+.offer-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 30px red;
+}
+
+.offer-card i{
+font-size:60px;
+margin-bottom:20px;
+color:red;
+text-shadow:0 0 15px red;
+}
+
+.offer-card h3{
+font-size:28px;
+margin-bottom:15px;
+}
+
+.offer-card p{
+color:#ccc;
+line-height:1.8;
+}
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#25d366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:35px;
+color:white;
+text-decoration:none;
+box-shadow:0 0 25px #25d366;
+z-index:1000;
+animation:pulse 2s infinite;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:#050505;
+color:#999;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0px);} 
+50%{transform:translateY(-20px);} 
+}
+
+@keyframes pulse{
+0%{transform:scale(1);} 
+50%{transform:scale(1.1);} 
+100%{transform:scale(1);} 
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:42px;
+}
+
+.section-title{
+font-size:35px;
+}
+
+.about-box{
+padding:30px;
+}
+}
+
+</style>
+</head>
+<body>
+
+
+
+<section class="about" id="about">
+<h2 class="section-title">About Us</h2>
+
+<div class="about-box">
+<h3>Professional Digital Branding Company</h3>
+<p>
+AF CODES provides premium quality websites, branding solutions, automation systems, social media promotion and business growth services. We create modern animated websites with professional UI design, WhatsApp integration, premium effects and high quality digital experiences for brands and businesses.
+</p>
+</div>
+</section>
+
+<section id="services">
+<h2 class="section-title">Our Services</h2>
+
+<div class="services-grid">
+
+<div class="flip-card">
+<div class="flip-inner">
+
+<div class="flip-front">
+<i class="fa-solid fa-code"></i>
+<h3>Web Designing</h3>
+</div>
+
+<div class="flip-back">
+<h3>Included</h3>
+<ul>
+<li>Premium UI Design</li>
+<li>WhatsApp Integration</li>
+<li>Responsive Website</li>
+<li>Animations & Effects</li>
+<li>SEO Friendly</li>
+<li>Fast Loading</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="flip-card">
+<div class="flip-inner">
+
+<div class="flip-front">
+<i class="fa-solid fa-bullhorn"></i>
+<h3>Digital Marketing</h3>
+</div>
+
+<div class="flip-back">
+<h3>Included</h3>
+<ul>
+<li>Instagram Promotions</li>
+<li>Business Posters</li>
+<li>Promotion Videos</li>
+<li>Brand Strategy</li>
+<li>Reels Editing</li>
+<li>Audience Growth</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="flip-card">
+<div class="flip-inner">
+
+<div class="flip-front">
+<i class="fa-solid fa-robot"></i>
+<h3>Automation</h3>
+</div>
+
+<div class="flip-back">
+<h3>Included</h3>
+<ul>
+<li>WhatsApp Automation</li>
+<li>Auto Reply Systems</li>
+<li>Customer Support</li>
+<li>Lead Collection</li>
+<li>Smart Messages</li>
+<li>Business Workflow</li>
+</ul>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2 class="section-title">Premium Offers</h2>
+
+<div class="offer-grid">
+
+<div class="offer-card">
+<i class="fa-solid fa-qrcode"></i>
+<h3>Website QR Code</h3>
+<p>
+Professional QR code for your website, business cards and shop promotions.
+</p>
+</div>
+
+<div class="offer-card">
+<i class="fa-solid fa-image"></i>
+<h3>Promotion Posters</h3>
+<p>
+High quality premium business posters and social media promotion designs.
+</p>
+</div>
+
+<div class="offer-card">
+<i class="fa-solid fa-video"></i>
+<h3>Promotion Reels</h3>
+<p>
+Modern cinematic reels and animated promotional videos for branding.
+</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 AF CODES • Premium Digital Solutions
+</footer>
+
+<a href="https://wa.me/919961552951?text=Hello%20AF%20CODES%20I%20Need%20Website" class="whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
